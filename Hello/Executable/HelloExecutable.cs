@@ -1,6 +1,6 @@
 using System;
 
-public class Hello
+public class HelloExecutable
 {
 	public static int Main(string[] args)
 	{
@@ -8,3 +8,4 @@ public class Hello
 		return 0;
 	}
 }
+
