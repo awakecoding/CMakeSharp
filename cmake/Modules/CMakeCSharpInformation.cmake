@@ -83,7 +83,7 @@ if(NOT CMAKE_CSharp_LINK_EXECUTABLE)
 	set(CMAKE_CSharp_LINK_EXECUTABLE
 		"echo \"CMAKE_CSharp_LINK_EXECUTABLE\""
 		"${CMAKE_CSharp_ECHO_ALL}"
-		"${CMAKE_CSharp_COMPILER} /target:exe <OBJECTS> /out:<TARGET>.exe")
+		"${CMAKE_CSharp_COMPILER} /target:exe <OBJECTS> /reference:${LIBRARY_OUTPUT_PATH}/HelloLibrary /out:<TARGET>.exe")
 endif()
 
 mark_as_advanced(

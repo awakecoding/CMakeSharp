@@ -1,11 +1,23 @@
 using System;
+using System.Collections.Generic;
 
-public class HelloExecutable
+using HelloLibrary;
+
+namespace HelloExecutable
 {
-	public static int Main(string[] args)
+	class MainClass
 	{
-		Console.WriteLine("Hello, World!");
-		return 0;
+		public static void Main (string[] args)
+		{
+			Console.WriteLine("Hello, World!");
+			
+			List<IAnimal> animals = new List<IAnimal>();
+			
+			animals.Add(new Cat());
+			animals.Add(new Dog());
+
+			foreach (IAnimal animal in animals)
+				Console.WriteLine(animal.Talk());
+		}
 	}
 }
-

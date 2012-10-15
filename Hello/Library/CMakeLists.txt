@@ -1,9 +1,11 @@
 
-set(MODULE_NAME "hello-library")
+set(MODULE_NAME "HelloLibrary")
 set(MODULE_PREFIX "HELLO_LIBRARY")
 
 set(${MODULE_PREFIX}_SRCS
-	HelloLibrary.cs)
+	Cat.cs
+	Dog.cs
+	IAnimal.cs)
 
 add_library(${MODULE_NAME} ${${MODULE_PREFIX}_SRCS})
 
