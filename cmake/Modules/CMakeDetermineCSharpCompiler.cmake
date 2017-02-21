@@ -19,8 +19,10 @@ if(CMAKE_CSharp_COMPILER)
 	set(CMAKE_CSharp_COMPILER_LOADED 1)
 endif(CMAKE_CSharp_COMPILER)
 
-configure_file(${CMAKE_LOCAL_ROOT}/Modules/CMakeCSharpCompiler.cmake.in
-	${CMAKE_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/CMakeCSharpCompiler.cmake IMMEDIATE @ONLY)
+message(STATUS "${CMAKE_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/CMakeCSharpCompiler.cmake")
+
+configure_file(${CMAKE_SOURCE_DIR}/cmake/Modules/CMakeCSharpCompiler.cmake.in
+	${CMAKE_BINARY_DIR}${CMAKE_FILES_DIRECTORY}/${CMAKE_VERSION}/CMakeCSharpCompiler.cmake IMMEDIATE @ONLY)
 
 set(CMAKE_CSharp_COMPILER_ENV_VAR "CSC")
 
